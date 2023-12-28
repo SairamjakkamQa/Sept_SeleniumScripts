@@ -30,8 +30,12 @@ public class Calendar {
 
 		String User_date = "1";
 
+		driver.navigate().refresh();
+		
 		driver.findElement(By.id("first_date_picker")).click();
 
+		
+		
 		while (true) {
 
 			String Month_year = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
@@ -40,7 +44,7 @@ public class Calendar {
 
 			String Month = MonyearSplit[0];
 			String Year = MonyearSplit[1];
-
+			
 			if (Month.equals(User_month) && Year.equals(User_year)) {
 
 				break;
