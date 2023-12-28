@@ -21,6 +21,7 @@ public class Alertsss {
 		driver.get("https://testautomationpractice.blogspot.com/");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		
+		driver.navigate().refresh();
 		driver.findElement(By.xpath("//button[text()='Alert']")).click();
 		
 		
